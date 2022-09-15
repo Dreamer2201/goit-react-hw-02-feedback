@@ -11,3 +11,6 @@ export const Btnfeedback = styled.li`
   &:last-child: 
       margin-right: 0;
 `;
+export const Title = styled.title`
+display: inline-block;
+`;
