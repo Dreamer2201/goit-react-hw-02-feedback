@@ -1,11 +1,11 @@
-import { Title } from './Feedback.styled';
+import { Wrapper, Title } from './Feedback.styled';
 
 const Container = ({ title, children }) => {
     return (
-        <div>
+        <Wrapper>
             {title && <Title>{title}</Title>}
         {children}
-        </div>
+        </Wrapper>
     )
 }
 export { Container };

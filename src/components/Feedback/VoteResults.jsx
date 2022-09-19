@@ -1,19 +1,19 @@
-import { ResultsName, ResultsItem } from './Feedback.styled';
+import { ResultsList, ResultsItem } from './Feedback.styled';
 
 export default function VoteResults({ good, neutral, bad, total, goodpersentage }) {
     if (good === 0 && neutral === 0 && bad === 0) {
         return (<p>"There is no feedback"</p>);
     } 
     return (
-        <ul>
+        <ResultsList>
             <ResultsItem>
-                <ResultsName>Good: <span>{good}</span> </ResultsName>
+                <p>Good: <span>{good}</span> </p>
             </ResultsItem>
             <ResultsItem>
-                <ResultsName>Neutral: <span>{neutral}</span> </ResultsName>
+                <p>Neutral: <span>{neutral}</span> </p>
             </ResultsItem>
             <ResultsItem>
-                <ResultsName>Bad: <span>{bad}</span> </ResultsName>
+                <p>Bad: <span>{bad}</span> </p>
             </ResultsItem>
             <ResultsItem>
                 <p>Total: <span>{total}</span> </p>
@@ -21,6 +21,6 @@ export default function VoteResults({ good, neutral, bad, total, goodpersentage 
             <ResultsItem>
                 <p>Positiv feedback: <span>{goodpersentage}%</span> </p>
             </ResultsItem>
-        </ul>
+        </ResultsList>
     );
 }

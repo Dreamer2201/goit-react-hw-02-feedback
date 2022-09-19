@@ -3,6 +3,14 @@ import GoodImg from "../images/Good.png";
 import Neutral from '../images/Neutral.png';
 import Sad from '../images/Sad.png';
 
+const Wrapper = styled.div`
+  min-width: 300px;
+  border: 1px solid #6495ED;
+  border-radius: 25px;
+  background-color: 	#F0FFFF;
+  padding: 10px;
+`;
+
 const BtnsFeedbackList = styled.ul`
   margin-left: 0;
   list-style: none;
@@ -32,38 +40,44 @@ const Btnfeedback = styled.button`
 
 const Title = styled.title`
   display: inline-block;
-  font-size: 34px;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 40px;
   text-shadow: 2px -2px 2px #87CEFA;
 
 `;
 
-const ResultsName = styled.p`
-  
+const ResultsList = styled.ul`
+  list-style: none;
 `;
 const ResultsItem = styled.li`
-    &:first-of-type:before {
-        content: url("${GoodImg}");
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        margin-right: 5px;
-    }
-    &:nth-of-type(2):before {
-        content: url("${Neutral}");
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        margin-right: 5px;
+  display: flex;
+  align-items: center;
+
+  &:first-of-type:before {
+    content: url("${GoodImg}");
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 35px;
+    transform: translate(-50%, -50%);
+  }
+  &:nth-of-type(2):before {
+      content: url("${Neutral}");
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 35px;
+      transform: translate(-50%, -50%);
     }
     &:nth-of-type(3):before {
-        content: url("${Sad}");
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        margin-right: 5px;
+    content: url("${Sad}");
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 35px;
+      transform: translate(-50%, -50%);
     }
-
-
 `;
 
-export { BtnsFeedbackList, BtnItem, Btnfeedback, Title, ResultsName, ResultsItem };
+export { Wrapper, BtnsFeedbackList, BtnItem, Btnfeedback, Title, ResultsList, ResultsItem };
