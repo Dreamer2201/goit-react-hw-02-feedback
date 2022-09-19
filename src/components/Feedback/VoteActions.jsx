@@ -1,11 +1,11 @@
-import { BtnsFeedbackList, Btnfeedback } from './Feedback.styled';
+import { BtnsFeedbackList, BtnItem, Btnfeedback } from './Feedback.styled';
 
 export default function VoteActions({ clickBtnVote }) {
     return (
         <BtnsFeedbackList>
-            <Btnfeedback><button onClick={() => clickBtnVote("good")}>Good</button></Btnfeedback>
-            <Btnfeedback><button onClick={() => clickBtnVote("neutral")}>Neutral</button></Btnfeedback>
-            <Btnfeedback><button onClick={() => clickBtnVote("bad")}>Bad</button></Btnfeedback>
+            <BtnItem><Btnfeedback onClick={() => clickBtnVote("good")}>Good</Btnfeedback></BtnItem>
+            <BtnItem><Btnfeedback onClick={() => clickBtnVote("neutral")}>Neutral</Btnfeedback></BtnItem>
+            <BtnItem><Btnfeedback onClick={() => clickBtnVote("bad")}>Bad</Btnfeedback></BtnItem>
         </BtnsFeedbackList>
     );
 }
