@@ -1,4 +1,4 @@
-import { BtnsFeedbackList, BtnItem, Btnfeedback } from './Feedback.styled';
+import { BtnsFeedbackList, BtnItem, Btnfeedback } from './FeedbackFormStyled';
 
 export default function VoteActions({ clickBtnVote }) {
     return (

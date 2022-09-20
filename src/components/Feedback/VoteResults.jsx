@@ -1,4 +1,4 @@
-import { ResultsList, ResultsItem, NoFeedback, TotalResult } from './Feedback.styled';
+import { ResultsList, ResultsItem, NoFeedback, TotalResult } from './ResultsStyled';
 
 export default function VoteResults({ good, neutral, bad, total, goodpersentage }) {
     if (good === 0 && neutral === 0 && bad === 0) {

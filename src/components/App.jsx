@@ -1,18 +1,10 @@
-
 import Feedback from './Feedback/Feedback';
+import { MainWrapper } from './AppStyles';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 20,
-      }}
-    >
+    <MainWrapper>
       <Feedback/>
-    </div>
+    </MainWrapper>
   );
 };

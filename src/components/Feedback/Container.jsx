@@ -1,4 +1,4 @@
-import { Wrapper, Title } from './Feedback.styled';
+import { Wrapper, Title } from './FeedbackFormStyled';
 
 const Container = ({ title, children }) => {
     return (
