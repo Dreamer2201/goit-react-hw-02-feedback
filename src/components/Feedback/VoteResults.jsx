@@ -1,8 +1,8 @@
-import { ResultsList, ResultsItem } from './Feedback.styled';
+import { ResultsList, ResultsItem, NoFeedback, TotalResult } from './Feedback.styled';
 
 export default function VoteResults({ good, neutral, bad, total, goodpersentage }) {
     if (good === 0 && neutral === 0 && bad === 0) {
-        return (<p>"There is no feedback"</p>);
+        return (<NoFeedback>"There is no feedback"</NoFeedback>);
     } 
     return (
         <ResultsList>
@@ -16,10 +16,10 @@ export default function VoteResults({ good, neutral, bad, total, goodpersentage 
                 <p>Bad: <span>{bad}</span> </p>
             </ResultsItem>
             <ResultsItem>
-                <p>Total: <span>{total}</span> </p>
+                <TotalResult>Total: <span>{total}</span> </TotalResult>
             </ResultsItem>
             <ResultsItem>
-                <p>Positiv feedback: <span>{goodpersentage}%</span> </p>
+                <TotalResult>Positiv feedback: <span>{goodpersentage}%</span> </TotalResult>
             </ResultsItem>
         </ResultsList>
     );

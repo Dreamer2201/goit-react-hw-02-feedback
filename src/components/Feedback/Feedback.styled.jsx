@@ -4,7 +4,7 @@ import Neutral from '../images/Neutral.png';
 import Sad from '../images/Sad.png';
 
 const Wrapper = styled.div`
-  min-width: 300px;
+  min-width: 400px;
   border: 1px solid #6495ED;
   border-radius: 25px;
   background-color: 	#F0FFFF;
@@ -13,6 +13,7 @@ const Wrapper = styled.div`
 
 const BtnsFeedbackList = styled.ul`
   margin-left: 0;
+  padding: 5px;
   list-style: none;
   display: flex;
   flex-diruction: column;
@@ -42,7 +43,7 @@ const Title = styled.title`
   display: inline-block;
   text-align: center;
   text-decoration: underline;
-  font-size: 40px;
+  font-size: 28px;
   text-shadow: 2px -2px 2px #87CEFA;
 
 `;
@@ -80,4 +81,12 @@ const ResultsItem = styled.li`
     }
 `;
 
-export { Wrapper, BtnsFeedbackList, BtnItem, Btnfeedback, Title, ResultsList, ResultsItem };
+const NoFeedback = styled.p`
+  font-size: 22px;
+  font-style: italic;
+`;
+const TotalResult = styled.p`
+  font-weight: 700;
+  font-style: italic;
+`;
+export { Wrapper, BtnsFeedbackList, BtnItem, Btnfeedback, Title, ResultsList, ResultsItem, NoFeedback, TotalResult };
