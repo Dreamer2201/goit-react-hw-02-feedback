@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Wrapper, Title } from './FeedbackFormStyled';
 
 const Container = ({ title, children }) => {
@@ -8,4 +9,9 @@ const Container = ({ title, children }) => {
         </Wrapper>
     )
 }
+
+Container.propTypes = {
+        title: PropTypes.string,
+}
+
 export { Container };

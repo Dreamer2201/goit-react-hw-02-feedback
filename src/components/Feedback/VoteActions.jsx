@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { BtnsFeedbackList, BtnItem, Btnfeedback } from './FeedbackFormStyled';
 
 export default function VoteActions({ clickBtnVote }) {
@@ -8,4 +9,8 @@ export default function VoteActions({ clickBtnVote }) {
             <BtnItem><Btnfeedback onClick={() => clickBtnVote("bad")}>Bad</Btnfeedback></BtnItem>
         </BtnsFeedbackList>
     );
+}
+
+VoteActions.propTypes = {
+        clickBtnVote: PropTypes.func,
 }

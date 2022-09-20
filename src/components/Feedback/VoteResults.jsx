@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import { ResultsList, ResultsItem, NoFeedback, TotalResult } from './ResultsStyled';
 
 export default function VoteResults({ good, neutral, bad, total, goodpersentage }) {
-    if (good === 0 && neutral === 0 && bad === 0) {
+    if (total === 0) {
         return (<NoFeedback>"There is no feedback"</NoFeedback>);
     } 
     return (
@@ -23,4 +24,12 @@ export default function VoteResults({ good, neutral, bad, total, goodpersentage 
             </ResultsItem>
         </ResultsList>
     );
+}
+
+VoteResults.propTypes = {
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
+    total: PropTypes.number,
+    goodpersentage: PropTypes.number,
 }
